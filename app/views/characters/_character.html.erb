@@ -1,0 +1,11 @@
+
+<div class="card">
+  <img src='<%= character['image'] %>' class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= character['name'] %></h5>
+    <p class="card-text">Origin: <%= character['origin']['name'] %></p>
+  </div>
+  <div class="card-footer">
+    <%= link_to 'More Info', character_path(character['id']) %>
+  </div>
+</div>

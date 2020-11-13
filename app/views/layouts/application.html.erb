@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CdeNtf</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<div class="container-fluid">
+  <% if current_user_email %>
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <%= link_to 'Home', root_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#"><%= current_user_email %></a>
+      </li>
+    </ul>
+  <% end %>
+  <%= yield %>
+</div>
+</body>
+</html>
